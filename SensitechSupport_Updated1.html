@@ -1,0 +1,140 @@
+<html>
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8"></META>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"></meta>
+
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
+</style>
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+
+		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+		// Settings for Chat
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+
+		embedded_svc.init(
+			'https://sensitech--sensitcstg.my.salesforce.com',
+			'https://sensitcstg-sensitech.cs202.force.com/newcase',
+			gslbBaseURL,
+			'00D7i0000003fNX',
+			'Web_To_Case',
+			{
+				baseLiveAgentContentURL: 'https://c.la3-c1cs-ia5.salesforceliveagent.com/content',
+				deploymentId: '5721R000000fxcS',
+				buttonId: '5731R000000fxcE',
+				baseLiveAgentURL: 'https://d.la3-c1cs-ia5.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7i00000000cZEAQ_17d7b63fc46',
+				isOfflineSupportEnabled: false
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://sensitech--sensitcstg.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script>
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://sensitech--sensitcstg.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+<input type=hidden name="orgid" value="00D7i0000003fNX">
+<input type=hidden name="retURL" value="https://www.sensitech.com/en/">
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail" value="rama.iyer@carrier.com">   -->
+<!--  ----------------------------------------------------------------------  -->
+
+* Requested Due Date: &nbsp &nbsp <span class="dateInput dateOnlyInput"><input  id="00N1R00000T7Oqm" name="00N1R00000T7Oqm" size="20" type="date" /></span><br>
+<br>
+<label for="email">* Email &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+<br>
+<label for="company">* Company &nbsp &nbsp &nbsp &nbsp </label><input  id="company" maxlength="80" name="company" size="20" type="text" /><br>
+<br>
+* Case Region: &nbsp <select  id="00N1R00000T7Oql" name="00N1R00000T7Oql" title="* Case Region"><option value="">--None--</option><option value="APAC">APAC</option>
+<option value="EMEA">EMEA</option>
+<option value="South America">South America</option>
+<option value="US">US</option>
+<option value="Canada">Canada</option>
+<option value="North America">North America</option>
+<option value="LATAM">LATAM</option>
+</select><br>
+<br>
+Request Type: &nbsp &nbsp<select  id="00N1R00000TeFQq" name="00N1R00000TeFQq" title="Request Type"><option value="">--None--</option><option value="Integrations">Integrations</option>
+<option value="TTMD Links">TTMD Links</option>
+<option value="Order Entry">Order Entry</option>
+<option value="CCN">CCN</option>
+<option value="Document /Certificate">Document /Certificate</option>
+<option value="Finance">Finance</option>
+<option value="New Customer Setup">New Customer Setup</option>
+<option value="Order Status">Order Status</option>
+<option value="Other Department">Other Department</option>
+<option value="Peer Review">Peer Review</option>
+<option value="Post Calibration">Post Calibration</option>
+<option value="Product Inquiry">Product Inquiry</option>
+<option value="Quality Survey">Quality Survey</option>
+<option value="Quote">Quote</option>
+<option value="Returns">Returns</option>
+<option value="Sales Inquiry">Sales Inquiry</option>
+<option value="Billing">Billing</option>
+<option value="Other">Other</option>
+</select><br>
+<br>
+<label for="subject">Subject &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+<br>
+<label for="description">Description &nbsp &nbsp &nbsp &nbsp </label><textarea name="description"></textarea><br>
+<br>
+* Product Vertical: &nbsp &nbsp <select  id="00N1R00000T7Oqe" name="00N1R00000T7Oqe" title="* Product Vertical"><option value="">--None--</option><option value="Corvus Ins">Corvus Ins</option>
+<option value="Security">Security</option>
+<option value="Food">Food</option>
+<option value="Life Science">Life Science</option>
+<option value="Consumer/Industrial">Consumer/Industrial</option>
+<option value="LS Inside Sales">LS Inside Sales</option>
+</select><br>
+<br>
+<input type="submit" name="submit">
+
+</form>
+
+</form>
+</html>
