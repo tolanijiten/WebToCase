@@ -23,6 +23,72 @@
 	}
 </style>
 
+    
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://sensitech--sensitcstg.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+<input type=hidden name="orgid" value="00D7i0000003fNX">
+<input type=hidden name="retURL" value="https://www.sensitech.com/en/">
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail" value="rama.iyer@carrier.com">   -->
+<!--  ----------------------------------------------------------------------  -->
+	<h1> Testing hi </h1>
+* Requested Due Date: &nbsp &nbsp <span class="dateInput dateOnlyInput"><input  id="00N1R00000T7Oqm" name="00N1R00000T7Oqm" size="20" type="date" /></span><br>
+<br>
+<label for="email">* Email &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+<br>
+<label for="company">* Company &nbsp &nbsp &nbsp &nbsp </label><input  id="company" maxlength="80" name="company" size="20" type="text" /><br>
+<br>
+* Case Region: &nbsp <select  id="00N1R00000T7Oql" name="00N1R00000T7Oql" title="* Case Region"><option value="">--None--</option><option value="APAC">APAC</option>
+<option value="EMEA">EMEA</option>
+<option value="South America">South America</option>
+<option value="US">US</option>
+<option value="Canada">Canada</option>
+<option value="North America">North America</option>
+<option value="LATAM">LATAM</option>
+</select><br>
+<br>
+Request Type: &nbsp &nbsp<select  id="00N1R00000TeFQq" name="00N1R00000TeFQq" title="Request Type"><option value="">--None--</option><option value="Integrations">Integrations</option>
+<option value="TTMD Links">TTMD Links</option>
+<option value="Order Entry">Order Entry</option>
+<option value="CCN">CCN</option>
+<option value="Document /Certificate">Document /Certificate</option>
+<option value="Finance">Finance</option>
+<option value="New Customer Setup">New Customer Setup</option>
+<option value="Order Status">Order Status</option>
+<option value="Other Department">Other Department</option>
+<option value="Peer Review">Peer Review</option>
+<option value="Post Calibration">Post Calibration</option>
+<option value="Product Inquiry">Product Inquiry</option>
+<option value="Quality Survey">Quality Survey</option>
+<option value="Quote">Quote</option>
+<option value="Returns">Returns</option>
+<option value="Sales Inquiry">Sales Inquiry</option>
+<option value="Billing">Billing</option>
+<option value="Other">Other</option>
+</select><br>
+<br>
+<label for="subject">Subject &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+<br>
+<label for="description">Description &nbsp &nbsp &nbsp &nbsp </label><textarea name="description"></textarea><br>
+<br>
+* Product Vertical: &nbsp &nbsp <select  id="00N1R00000T7Oqe" name="00N1R00000T7Oqe" title="* Product Vertical"><option value="">--None--</option><option value="Corvus Ins">Corvus Ins</option>
+<option value="Security">Security</option>
+<option value="Food">Food</option>
+<option value="Life Science">Life Science</option>
+<option value="Consumer/Industrial">Consumer/Industrial</option>
+<option value="LS Inside Sales">LS Inside Sales</option>
+</select><br>
+<br>
+<input type="submit" name="submit">
+
+</form>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
         <script type='text/javascript'>
         var initESW = function(gslbBaseURL) {
@@ -107,72 +173,6 @@
         } else {
             initESW('https://service.force.com');
         }
-        </script>    
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <FORM> element to your page.             -->
-<!--  ----------------------------------------------------------------------  -->
+        </script>
 
-<form action="https://sensitech--sensitcstg.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
-
-<input type=hidden name="orgid" value="00D7i0000003fNX">
-<input type=hidden name="retURL" value="https://www.sensitech.com/en/">
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-<!--  these lines if you wish to test in debug mode.                          -->
-<!--  <input type="hidden" name="debug" value=1>                              -->
-<!--  <input type="hidden" name="debugEmail" value="rama.iyer@carrier.com">   -->
-<!--  ----------------------------------------------------------------------  -->
-	<h1> HEllo </h1>
-* Requested Due Date: &nbsp &nbsp <span class="dateInput dateOnlyInput"><input  id="00N1R00000T7Oqm" name="00N1R00000T7Oqm" size="20" type="date" /></span><br>
-<br>
-<label for="email">* Email &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-<br>
-<label for="company">* Company &nbsp &nbsp &nbsp &nbsp </label><input  id="company" maxlength="80" name="company" size="20" type="text" /><br>
-<br>
-* Case Region: &nbsp <select  id="00N1R00000T7Oql" name="00N1R00000T7Oql" title="* Case Region"><option value="">--None--</option><option value="APAC">APAC</option>
-<option value="EMEA">EMEA</option>
-<option value="South America">South America</option>
-<option value="US">US</option>
-<option value="Canada">Canada</option>
-<option value="North America">North America</option>
-<option value="LATAM">LATAM</option>
-</select><br>
-<br>
-Request Type: &nbsp &nbsp<select  id="00N1R00000TeFQq" name="00N1R00000TeFQq" title="Request Type"><option value="">--None--</option><option value="Integrations">Integrations</option>
-<option value="TTMD Links">TTMD Links</option>
-<option value="Order Entry">Order Entry</option>
-<option value="CCN">CCN</option>
-<option value="Document /Certificate">Document /Certificate</option>
-<option value="Finance">Finance</option>
-<option value="New Customer Setup">New Customer Setup</option>
-<option value="Order Status">Order Status</option>
-<option value="Other Department">Other Department</option>
-<option value="Peer Review">Peer Review</option>
-<option value="Post Calibration">Post Calibration</option>
-<option value="Product Inquiry">Product Inquiry</option>
-<option value="Quality Survey">Quality Survey</option>
-<option value="Quote">Quote</option>
-<option value="Returns">Returns</option>
-<option value="Sales Inquiry">Sales Inquiry</option>
-<option value="Billing">Billing</option>
-<option value="Other">Other</option>
-</select><br>
-<br>
-<label for="subject">Subject &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
-<br>
-<label for="description">Description &nbsp &nbsp &nbsp &nbsp </label><textarea name="description"></textarea><br>
-<br>
-* Product Vertical: &nbsp &nbsp <select  id="00N1R00000T7Oqe" name="00N1R00000T7Oqe" title="* Product Vertical"><option value="">--None--</option><option value="Corvus Ins">Corvus Ins</option>
-<option value="Security">Security</option>
-<option value="Food">Food</option>
-<option value="Life Science">Life Science</option>
-<option value="Consumer/Industrial">Consumer/Industrial</option>
-<option value="LS Inside Sales">LS Inside Sales</option>
-</select><br>
-<br>
-<input type="submit" name="submit">
-
-</form>
-
-</form>
 </html>
